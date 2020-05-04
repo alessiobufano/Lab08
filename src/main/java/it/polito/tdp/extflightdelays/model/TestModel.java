@@ -6,6 +6,12 @@ public class TestModel {
 		
 		Model model = new Model();
 
+		
+		model.setGraph(3000.0);
+		
+		//System.out.print(model.getGraph().edgeSet());
+		System.out.print(model.getEdgeList(600.0));
+		
 	}
 
 }

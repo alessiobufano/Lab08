@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 
 public class Flight {
 
-	private int id;
+	private int flightId;
 	private int airlineId;
 	private int flightNumber;
 	private String tailNumber;
@@ -20,7 +20,7 @@ public class Flight {
 	public Flight(int id, int airlineId, int flightNumber, String tailNumber, int originAirportId,
 			int destinationAirportId, LocalDateTime scheduledDepartureDate, Double departureDelay, Double elapsedTime,
 			int distance, LocalDateTime arrivalDate, Double arrivalDelay) {
-		this.id = id;
+		this.flightId = id;
 		this.airlineId = airlineId;
 		this.flightNumber = flightNumber;
 		this.tailNumber = tailNumber;
@@ -34,12 +34,12 @@ public class Flight {
 		this.arrivalDelay = arrivalDelay;
 	}
 
-	public int getId() {
-		return id;
+	public int getFlightId() {
+		return flightId;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setFlightId(int id) {
+		this.flightId = id;
 	}
 
 	public int getAirlineId() {
@@ -154,7 +154,7 @@ public class Flight {
 
 	@Override
 	public String toString() {
-		return "Flight [id=" + id + ", flightNumber=" + flightNumber + ", originAirportId=" + originAirportId
+		return "Flight [id=" + flightId + ", flightNumber=" + flightNumber + ", originAirportId=" + originAirportId
 				+ ", destinationAirportId=" + destinationAirportId + "]";
 	}
 

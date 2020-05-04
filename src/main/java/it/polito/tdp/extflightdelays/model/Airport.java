@@ -2,7 +2,7 @@ package it.polito.tdp.extflightdelays.model;
 
 public class Airport {
 	
-	private int id;
+	private int airportId;
 	private String iataCode;
 	private String airportName;
 	private String city;
@@ -14,7 +14,7 @@ public class Airport {
 	
 	public Airport(int id, String iataCode, String airportName, String city, String state, String country,
 			Double latitude, Double longitude, Double timezoneOffset) {
-		this.id = id;
+		this.airportId = id;
 		this.iataCode = iataCode;
 		this.airportName = airportName;
 		this.city = city;
@@ -25,12 +25,12 @@ public class Airport {
 		this.timezoneOffset = timezoneOffset;
 	}
 
-	public int getId() {
-		return id;
+	public int getAirportId() {
+		return airportId;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setAirportId(int id) {
+		this.airportId = id;
 	}
 
 	public String getIataCode() {
@@ -101,7 +101,7 @@ public class Airport {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + id;
+		result = prime * result + airportId;
 		return result;
 	}
 
@@ -114,14 +114,14 @@ public class Airport {
 		if (getClass() != obj.getClass())
 			return false;
 		Airport other = (Airport) obj;
-		if (id != other.id)
+		if (airportId != other.airportId)
 			return false;
 		return true;
 	}
 
 	@Override
 	public String toString() {
-		return "Airport [id=" + id + ", iataCode=" + iataCode + ", airportName=" + airportName + "]";
+		return "Airport " + airportName ;
 	}
 	
 }
